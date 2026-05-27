@@ -1,12 +1,14 @@
+import MainHeader from "@/components/MainHeader";
 import { Tabs } from "expo-router";
 
 export default function TabsLayout() {
   return (
-    <Tabs>
+    <Tabs >
       <Tabs.Screen
         name="home"
         options={{
           title: "Home",
+       headerShown:false
         }}
       />
       <Tabs.Screen
@@ -15,13 +17,13 @@ export default function TabsLayout() {
           title: "Ai",
         }}
       />
-       <Tabs.Screen
+      <Tabs.Screen
         name="files"
         options={{
           title: "Files",
         }}
       />
-       <Tabs.Screen
+      <Tabs.Screen
         name="settings"
         options={{
           title: "Settings",

@@ -1,14 +1,23 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StatusBar } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 
 const index = () => {
   return (
-    <View>
+    <SafeAreaView style={styles.container}>
+        <StatusBar hidden={true}/>
+
       <Text>index</Text>
-    </View>
+    </SafeAreaView>
   )
 }
 
 export default index
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+    backgroundColor:"red",
+    flex:1
+  }
+})
