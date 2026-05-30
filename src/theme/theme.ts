@@ -1,123 +1,84 @@
-// src/theme/theme.ts
+// theme.ts
 
 export const COLORS = {
-  // =========================
-  // CORE BRAND COLORS
-  // =========================
+  // Base
+  background: "#10141a",
+  onBackground: "#dfe2eb",
 
-  primary: "#0A0A0A",
-  secondary: "#3B82F6",
-  tertiary: "#7C3AED",
+  // Surfaces
+  surface: "#10141a",
+  surfaceDim: "#10141a",
+  surfaceBright: "#353940",
 
-  // =========================
-  // BACKGROUND COLORS
-  // =========================
+  surfaceLowest: "#0a0e14",
+  surfaceLow: "#181c22",
+  surfaceContainer: "#1c2026",
+  surfaceHigh: "#262a31",
+  surfaceHighest: "#31353c",
 
-  background: "#050505",
-  backgroundSecondary: "#0D0D0D",
-  backgroundTertiary: "#121212",
+  // Surface Variants
+  surfaceVariant: "#31353c",
+  surfaceTint: "#a2c9ff",
 
-  card: "#111111",
-  modal: "#161616",
-  elevated: "#1A1A1A",
+  // Text
+  text: "#dfe2eb",
+  textSecondary: "#c0c7d4",
+  textMuted: "#8b919d",
+  inverseText: "#2d3137",
 
-  // =========================
-  // TEXT COLORS
-  // =========================
+  // Borders
+  border: "#414752",
+  outline: "#8b919d",
+  outlineVariant: "#414752",
 
-  textPrimary: "#F5F5F5",
-  textSecondary: "#A1A1AA",
-  textMuted: "#71717A",
-  textDisabled: "#52525B",
+  // Primary
+  primary: "#58a6ff",
+  primaryLight: "#a2c9ff",
+  primaryContainer: "#58a6ff",
+  onPrimary: "#00315c",
+  onPrimaryContainer: "#003a6b",
+  inversePrimary: "#0060aa",
 
-  // =========================
-  // BORDER COLORS
-  // =========================
+  // Secondary
+  secondary: "#bc8cf2",
+  secondaryLight: "#dbb8ff",
+  secondaryContainer: "#5c2e8f",
+  onSecondary: "#441276",
+  onSecondaryContainer: "#cea2ff",
 
-  border: "#222222",
-  borderLight: "#2A2A2A",
-  borderFocus: "#3B82F6",
+  // Tertiary / Success
+  tertiary: "#7ee787",
+  tertiaryContainer: "#50b85e",
+  onTertiary: "#003910",
+  onTertiaryContainer: "#004414",
 
-  // =========================
-  // STATUS COLORS
-  // =========================
+  // Error
+  error: "#ff7b72",
+  errorContainer: "#93000a",
+  onError: "#690005",
+  onErrorContainer: "#ffdad6",
 
-  success: "#22C55E",
-  warning: "#F59E0B",
-  error: "#EF4444",
-  info: "#3B82F6",
+  // Utility
+  success: "#7ee787",
+  warning: "#ffb86c",
+  danger: "#ff7b72",
+  info: "#58a6ff",
 
-  // =========================
-  // CODE EDITOR COLORS
-  // =========================
+  // Overlays
+  overlay: "rgba(0,0,0,0.4)",
+  glass: "rgba(28, 32, 38, 0.7)",
 
-  codeBackground: "#0B0B0B",
-  codeBorder: "#1F1F1F",
-  lineNumber: "#525252",
-
-  syntaxKeyword: "#C084FC",
-  syntaxString: "#86EFAC",
-  syntaxFunction: "#60A5FA",
-  syntaxVariable: "#F9A8D4",
-  syntaxComment: "#6B7280",
-
-  // =========================
-  // BUTTON COLORS
-  // =========================
-
-  buttonPrimary: "#3B82F6",
-  buttonSecondary: "#7C3AED",
-  buttonDanger: "#EF4444",
-
-  buttonText: "#FFFFFF",
-
-  // =========================
-  // ICON COLORS
-  // =========================
-
-  iconPrimary: "#F5F5F5",
-  iconSecondary: "#A1A1AA",
-  iconActive: "#3B82F6",
-
-  // =========================
-  // DRAWER COLORS
-  // =========================
-
-  drawerBackground: "#090909",
-  drawerActive: "#1A1A1A",
-  drawerInactive: "#A1A1AA",
-
-  // =========================
-  // TAB COLORS
-  // =========================
-
-  tabBackground: "#0B0B0B",
-  tabActive: "#FFFFFF",
-  tabInactive: "#6B7280",
-
-  // =========================
-  // INPUT COLORS
-  // =========================
-
-  inputBackground: "#121212",
-  inputBorder: "#262626",
-  inputPlaceholder: "#6B7280",
-
-  // =========================
-  // GLASS / SEOUL NOIR EFFECTS
-  // =========================
-
-  glass: "rgba(255,255,255,0.04)",
-  overlay: "rgba(0,0,0,0.5)",
-
-  shadow: "#000000",
+  // Syntax Highlighting
+  syntax :{
+    keyword: "#ff7b72",
+    string: "#a5d6ff",
+    function: "#d2a8ff",
+    variable: "#ffa657",
+    number: "#79c0ff",
+    comment: "#8b949e",
+    type: "#7ee787",
+  },
 };
-
-
-
-// ==========================================
-// TYPOGRAPHY SYSTEM
-// ==========================================
 
 export const FONT = {
   heading: "SpaceGrotesk_700Bold",
@@ -131,12 +92,6 @@ export const FONT = {
   monoMedium: "JetBrainsMono_500Medium",
 };
 
-
-
-// ==========================================
-// FONT SIZES
-// ==========================================
-
 export const FONT_SIZE = {
   xs: 10,
   sm: 12,
@@ -144,169 +99,169 @@ export const FONT_SIZE = {
   md: 16,
   lg: 18,
   xl: 20,
-  xxl: 24,
-  title: 32,
-  hero: 42,
+  "2xl": 24,
+  "3xl": 32,
+  "4xl": 40,
 };
 
-
-
-// ==========================================
-// LINE HEIGHTS
-// ==========================================
-
 export const LINE_HEIGHT = {
+  xs: 14,
   sm: 16,
   base: 20,
   md: 24,
   lg: 28,
-  xl: 34,
+  xl: 32,
+  "2xl": 36,
+  "3xl": 44,
 };
 
-
-
-// ==========================================
-// BORDER RADIUS
-// ==========================================
+export const FONT_WEIGHT = {
+  regular: "400" as const,
+  medium: "500" as const,
+  semiBold: "600" as const,
+  bold: "700" as const,
+};
 
 export const RADIUS = {
-  xs: 6,
-  sm: 10,
-  md: 14,
-  lg: 18,
-  xl: 24,
-  full: 999,
+  xs: 4,
+  sm: 6,
+  md: 8,
+  lg: 12,
+  xl: 16,
+  "2xl": 24,
+  full: 9999,
 };
-
-
-
-// ==========================================
-// SPACING SYSTEM
-// ==========================================
 
 export const SPACING = {
-  xs: 4,
-  sm: 8,
-  md: 12,
-  lg: 16,
-  xl: 20,
-  xxl: 28,
-  section: 40,
+  0: 0,
+  1: 4,
+  2: 8,
+  3: 12,
+  4: 16,
+  5: 20,
+  6: 24,
+  7: 28,
+  8: 32,
+  10: 40,
+  12: 48,
+  16: 64,
+  20: 80,
 };
 
-
-
-// ==========================================
-// SHADOWS
-// ==========================================
-
 export const SHADOWS = {
-  soft: {
+  none: {
+    shadowColor: "transparent",
+    shadowOffset: {
+      width: 0,
+      height: 0,
+    },
+    shadowOpacity: 0,
+    shadowRadius: 0,
+    elevation: 0,
+  },
+
+  sm: {
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.2,
-    shadowRadius: 6,
-    elevation: 3,
+    shadowOpacity: 0.15,
+    shadowRadius: 4,
+    elevation: 2,
   },
 
-  medium: {
+  md: {
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 4,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 10,
-    elevation: 6,
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 4,
   },
 };
 
-
-
-// ==========================================
-// COMPONENT THEME TOKENS
-// ==========================================
-
-export const COMPONENTS = {
-  header: {
-    height: 70,
-    backgroundColor: COLORS.background,
+export const TYPOGRAPHY = {
+  headlineLg: {
+    fontFamily: FONT.heading,
+    fontSize: FONT_SIZE["3xl"],
+    lineHeight: LINE_HEIGHT["3xl"],
+    fontWeight: FONT_WEIGHT.bold,
   },
 
-  tabBar: {
-    height: 70,
-    borderRadius: 22,
+  headlineMd: {
+    fontFamily: FONT.headingMedium,
+    fontSize: FONT_SIZE["2xl"],
+    lineHeight: LINE_HEIGHT["2xl"],
+    fontWeight: FONT_WEIGHT.semiBold,
   },
 
-  card: {
-    padding: 18,
-    borderRadius: 20,
+  headlineSm: {
+    fontFamily: FONT.headingMedium,
+    fontSize: FONT_SIZE.xl,
+    lineHeight: LINE_HEIGHT.xl,
+    fontWeight: FONT_WEIGHT.semiBold,
   },
 
-  button: {
-    height: 54,
-    borderRadius: 16,
+  bodyLg: {
+    fontFamily: FONT.body,
+    fontSize: FONT_SIZE.md,
+    lineHeight: LINE_HEIGHT.md,
+    fontWeight: FONT_WEIGHT.regular,
   },
 
-  input: {
-    height: 56,
-    borderRadius: 16,
+  bodyMd: {
+    fontFamily: FONT.body,
+    fontSize: FONT_SIZE.base,
+    lineHeight: LINE_HEIGHT.base,
+    fontWeight: FONT_WEIGHT.regular,
   },
 
-  snippetCard: {
-    borderRadius: 22,
-    padding: 18,
+  bodySm: {
+    fontFamily: FONT.body,
+    fontSize: FONT_SIZE.sm,
+    lineHeight: LINE_HEIGHT.sm,
+    fontWeight: FONT_WEIGHT.regular,
+  },
+
+  label: {
+    fontFamily: FONT.bodyMedium,
+    fontSize: FONT_SIZE.sm,
+    lineHeight: LINE_HEIGHT.sm,
+    fontWeight: FONT_WEIGHT.medium,
+  },
+
+  code: {
+    fontFamily: FONT.mono,
+    fontSize: FONT_SIZE.base,
+    lineHeight: LINE_HEIGHT.base,
+    fontWeight: FONT_WEIGHT.regular,
+  },
+
+  codeMedium: {
+    fontFamily: FONT.monoMedium,
+    fontSize: FONT_SIZE.base,
+    lineHeight: LINE_HEIGHT.base,
+    fontWeight: FONT_WEIGHT.medium,
+  },
+
+  caption: {
+    fontFamily: FONT.body,
+    fontSize: FONT_SIZE.xs,
+    lineHeight: LINE_HEIGHT.xs,
+    color: COLORS.textMuted,
   },
 };
-
-
-
-// ==========================================
-// SEOUL NOIR GRADIENTS
-// ==========================================
-
-export const GRADIENTS = {
-  primary: ["#3B82F6", "#7C3AED"],
-
-  dark: ["#050505", "#111111"],
-
-  card: ["#111111", "#171717"],
-
-  accent: ["#60A5FA", "#A855F7"],
-};
-
-
-
-// ==========================================
-// ANIMATION TIMINGS
-// ==========================================
-
-export const ANIMATION = {
-  fast: 150,
-  normal: 250,
-  slow: 400,
-};
-
-
-
-// ==========================================
-// EXPORT DEFAULT THEME
-// ==========================================
 
 export const THEME = {
-  COLORS,
-  FONT,
-  FONT_SIZE,
-  LINE_HEIGHT,
-  RADIUS,
-  SPACING,
-  SHADOWS,
-  COMPONENTS,
-  GRADIENTS,
-  ANIMATION,
+  colors: COLORS,
+  font: FONT,
+  typography: TYPOGRAPHY,
+  spacing: SPACING,
+  radius: RADIUS,
+  shadows: SHADOWS,
 };
 
 export default THEME;

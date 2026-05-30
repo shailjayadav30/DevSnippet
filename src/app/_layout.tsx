@@ -1,7 +1,7 @@
 import { Stack } from "expo-router";
-
 import { useFonts } from "expo-font";
 import { View } from "react-native";
+import { useEffect } from "react";
 
 import {
   Inter_400Regular,
@@ -18,7 +18,9 @@ import {
   JetBrainsMono_400Regular,
   JetBrainsMono_500Medium,
 } from "@expo-google-fonts/jetbrains-mono";
+
 import { COLORS } from "@/theme/theme";
+import { initDatabase } from "../database/schema";
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -33,13 +35,17 @@ export default function RootLayout() {
     JetBrainsMono_500Medium,
   });
 
+  useEffect(() => {
+    initDatabase();
+  }, []);
+
   if (!loaded) {
     return null;
   }
 
   return (
-    <View style={{flex:1, backgroundColor:COLORS.background}}>
-      <Stack screenOptions={{ headerShown: false }} />;
+    <View style={{ flex: 1, backgroundColor: COLORS.background }}>
+      <Stack screenOptions={{ headerShown: false }} />
     </View>
   );
 }

@@ -1,47 +1,34 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { BlurView } from "expo-blur";
 
-import Ionicons from "@expo/vector-icons/Ionicons";
 
-import { COLORS, FONT } from "@/theme/theme";
-import { useNavigation } from "expo-router";
+import { COLORS } from "@/theme/theme";
+import Typography from "./ui/Typography";
+
 const MainHeader = () => {
-  const navigation:any = useNavigation();
   return (
     <SafeAreaView edges={["top"]} style={styles.safeArea}>
       <BlurView intensity={40} tint="dark" style={styles.blurContainer}>
+
+
         <View style={styles.container}>
-          {/* LEFT BUTTON */}
-          <TouchableOpacity
-              onPress={() => navigation.openDrawer()}
-            activeOpacity={0.7}
-            style={styles.iconButton}
-          >
-            <Ionicons
-              name="menu-outline"
-              color={COLORS.iconPrimary}
-              size={28}
-            />
-          </TouchableOpacity>
-
-          {/* TITLE */}
-          <View style={styles.titleContainer}>
-            <Text style={styles.text}>Codezy</Text>
-            <Text style={styles.subText}>Seoul Noir Workspace</Text>
+          <View style={styles.left}>
+            <Typography
+              style={styles.heading}
+              variant="heading"
+              color={COLORS.text}
+            >
+              CODEZY
+            </Typography>
           </View>
-
-          {/* RIGHT BUTTON */}
-          <TouchableOpacity activeOpacity={0.7} style={styles.addButton}>
-            <Ionicons
-              name="add-outline"
-              //   color={COLORS.iconPrimary}
-              color={"#25005A"}
-              size={26}
-            />
-          </TouchableOpacity>
+          <View style={styles.right}>
+            <Typography variant="headingMedium" color={COLORS.text}>
+              LOCAL
+            </Typography>
+          </View>
         </View>
       </BlurView>
     </SafeAreaView>
@@ -62,7 +49,7 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    height: 90,
+    height: 70,
 
     flexDirection: "row",
     alignItems: "center",
@@ -70,7 +57,6 @@ const styles = StyleSheet.create({
 
     paddingHorizontal: 20,
 
-    // backgroundColor: "rgba(10,10,10,0.72)",
     backgroundColor: COLORS.background,
 
     shadowColor: "#000",
@@ -84,61 +70,19 @@ const styles = StyleSheet.create({
     elevation: 8,
   },
 
-  titleContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  text: {
-    color: COLORS.textPrimary,
-
-    fontFamily: FONT.heading,
-
-    fontSize: 24,
-
-    letterSpacing: 1,
-  },
-
-  subText: {
-    color: COLORS.textSecondary,
-
-    fontSize: 11,
-
-    marginTop: 2,
-
-    letterSpacing: 1.2,
-
-    textTransform: "uppercase",
-  },
-
-  iconButton: {
-    width: 46,
-    height: 46,
-
-    alignItems: "center",
-    justifyContent: "center",
-
-    borderRadius: 16,
-
-    backgroundColor: COLORS.glass,
-
+  left: {},
+  right: {
+    borderColor: COLORS.outlineVariant,
     borderWidth: 1,
-    borderColor: COLORS.borderLight,
+    // backgroundColor:"red",
+    paddingHorizontal: 16,
+    paddingVertical: 6,
+    borderRadius: 20,
   },
 
-  addButton: {
-    width: 46,
-    height: 46,
-
-    alignItems: "center",
-    justifyContent: "center",
-
-    borderRadius: 16,
-
-    // backgroundColor: "rgba(124, 58, 237, 0.15)",
-    backgroundColor: "#BB9AFF",
-
-    borderWidth: 1,
-    borderColor: "rgba(124, 58, 237, 0.25)",
+  rightText: {},
+  heading: {
+    fontSize: 20,
   },
+
 });

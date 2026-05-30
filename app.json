@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "devSnipet",
-    "slug": "devSnipet",
+    "name": "Codezy",
+    "slug": "Codezy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -17,7 +17,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.apoorrv.devSnipet"
     },
     "web": {
       "output": "static",
@@ -30,16 +31,24 @@
         {
           "backgroundColor": "#208AEF",
           "android": {
-            "image": "./assets/images/splash-icon.png",
+            "image": "./assets/images/customicon.png",
             "imageWidth": 76
           }
         }
       ],
-      "expo-font"
+      "expo-font",
+      "expo-sqlite",
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c4f2087f-aee5-45ee-b061-c84d81e24209"
+      }
     }
   }
 }

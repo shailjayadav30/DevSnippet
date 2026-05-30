@@ -1,28 +1,38 @@
+import HeaderCreateSnipet from "@/components/HeaderCreateSnipet";
 import MainHeader from "@/components/MainHeader";
-import { Drawer } from "expo-router/drawer";
-import { StatusBar } from "react-native";
+import { Stack } from "expo-router";
 
 export default function HomeLayout() {
   return (
-    <Drawer
-      screenOptions={{
-        headerShown: true,
-        header: () => <MainHeader />,
-        drawerType: "slide",
-      }}
-    >
-      <Drawer.Screen
+    <Stack>
+      <Stack.Screen
         name="index"
         options={{
-          title: "Recent snippets",
+          header: () => <MainHeader />,
+          title: "Snippets",
         }}
       />
-      <Drawer.Screen
-        name="all_snippets"
+      <Stack.Screen
+        name="createSnippet"
         options={{
-          title: "All snippets",
+          header: () => <HeaderCreateSnipet />,
+          title: "Create Snippet",
         }}
       />
-    </Drawer>
+      <Stack.Screen
+        name="snippets/[id]"
+        options={{
+          headerShown: false,
+          title: "Snippet Details",
+        }}
+      />
+      <Stack.Screen
+        name="edit/[id]"
+        options={{
+          headerShown: false,
+          title: "Edit Snippet",
+        }}
+      />
+    </Stack>
   );
 }
